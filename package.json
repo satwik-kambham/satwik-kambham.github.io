@@ -1,0 +1,27 @@
+{
+  "name": "satwik-kambham.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio and Blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satwik-kambham/satwik-kambham.github.io.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Blog"
+  ],
+  "author": "Satwik Kambham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satwik-kambham/satwik-kambham.github.io/issues"
+  },
+  "homepage": "https://github.com/satwik-kambham/satwik-kambham.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-vite": "^4.0.0"
+  }
+}
