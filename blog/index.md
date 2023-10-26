@@ -1,1 +1,5 @@
-This is a blog post
+---
+layout: blog.njk
+---
+
+Welcome to my blog!
