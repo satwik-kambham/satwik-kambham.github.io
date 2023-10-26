@@ -4,7 +4,12 @@
   "description": "Portfolio and Blog",
   "main": "index.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve"
+    "start:css": "tailwindcss -i ./public/css/input.css -o ./public/css/bundle.css --watch",
+    "start:11ty": "npx @11ty/eleventy --serve",
+    "start": "run-p start:*",
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/bundle.css",
+    "build:11ty": "npx @11ty/eleventy",
+    "build": "run-s build:*"
   },
   "repository": {
     "type": "git",
@@ -22,6 +27,7 @@
   "homepage": "https://github.com/satwik-kambham/satwik-kambham.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-vite": "^4.0.0"
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.3.5"
   }
 }
