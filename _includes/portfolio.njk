@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: base.njk
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ name }}</title>
-
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="/css/bundle.css">
-</head>
-
-<body>
-    <div class="p-10">
-        <h1 class="text-blue-600 text-6xl">{{ info.name }}</h1>
-        {{ content }}
+<div class="p-6 md:max-w-3xl md:mx-auto lg:max-w-4xl">
+    <article class="prose lg:prose-lg md:max-w-none prose-stone dark:prose-invert prose-img:rounded-lg prose-img:max-w-full shadow-2xl
+            p-8 dark:bg-stone-800 rounded-2xl">
+        {{ content | safe }}
         <ul>
-            {%- for post in collections.all -%}
-            <li><a href="{{ post.page.url }}">{{ post.data.title }}</a></li>
+            {%- for post in collections.posts -%}
+                <li>
+                    <a href="{{ post.page.url }}">{{ post.data.title }}</a>
+                </li>
             {%- endfor -%}
         </ul>
-    </div>
-</body>
-
-</html>
+    </article>
+</div>

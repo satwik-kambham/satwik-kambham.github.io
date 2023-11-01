@@ -3,15 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ name }}</title>
-        <!-- Tailwind CSS -->
+        <title>{{ info.name }}</title>
         <link rel="stylesheet" href="/css/bundle.css">
+        <link rel="stylesheet" href="/css/prism-theme.css">
     </head>
-    <body>
-        <div class="p-10">
-            <a href="/">
-                <h1 class="text-blue-600 text-6xl">{{ info.name }}</h1>
-            </a>
+    <body class="dark">
+        <div class="min-h-screen dark:bg-stone-900 overflow-hidden">
+            <header class="bg-transparent text-stone-900 dark:text-stone-200 p-4 flex justify-between items-center flex-col lg:flex-row">
+                <div class="hidden lg:flex items-center lg:flex-row">
+                    <a href="/" class="text-xl lg:ml-4">Portfolio</a>
+                    <a href="/blog" class="text-xl lg:ml-4">Blog</a>
+                </div>
+                <a href="/" class="text-4xl font-bold">{{ info.name }}</a>
+                <div class="flex items-center flex-col lg:flex-row">
+                    <a href="{{ info.github }}" target="_blank" class="text-xl lg:mr-4">GitHub</a>
+                    <a href="{{ info.linkedin }}" target="_blank" class="text-xl lg:mr-4">LinkedIn</a>
+                </div>
+            </header>
             {{ content | safe }}
         </div>
     </body>
