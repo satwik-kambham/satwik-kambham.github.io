@@ -7,6 +7,8 @@ module.exports = function (eleventyConfig) {
         "./public/css/bundle.css": "./css/bundle.css",
         "./public/css/prism-theme.css": "./css/prism-theme.css",
         "./public/images": "./images",
+        "./public/icons": "./icons",
+        "./public/js/script.js": "./js/script.js",
     });
 
     return {
