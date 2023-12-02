@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
         "./public/images": "./images",
         "./public/icons": "./icons",
         "./public/js/script.js": "./js/script.js",
+        "./public/resume.pdf": "./resume.pdf",
     });
 
     return {
