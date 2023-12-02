@@ -2,16 +2,105 @@
 layout: base.njk
 ---
 
-<div class="p-6 md:max-w-3xl md:mx-auto lg:max-w-4xl">
-    <article class="prose lg:prose-lg md:max-w-none prose-stone dark:prose-invert prose-img:rounded-lg prose-img:max-w-full shadow-2xl
-            p-8 bg-paper-secondary-light dark:bg-paper-secondary-dark rounded-2xl">
-        {{ content | safe }}
-        <ul>
-            {%- for post in collections.posts -%}
-                <li>
-                    <a href="{{ post.page.url }}">{{ post.data.title }}</a>
-                </li>
-            {%- endfor -%}
-        </ul>
-    </article>
+<div class="text-ink-light dark:text-paper-light pt-6 lg:pt-10">
+    <div class="max-w-4xl px-12 lg:px-28">
+        <div class="font-sans lg:font-semibold text-5xl lg:text-7xl pb-6">{{ greeting }}</div>
+        <div class="font-light lg:font-extralight text-xl lg:text-3xl">{{ introduction }}</div>
+    </div>
+    <div class="px-12 lg:px-24">
+        <div class="flex pt-12">
+            <div class="">
+                <div class="lg:sticky lg:top-36 w-24 py-24 rotate-90 text-3xl lg:text-6xl text-ink-muted-light dark:text-ink-muted-dark">
+                    Projects</div>
+            </div>
+            <div class="flex-1">
+                <div class="p-4">
+                    {%- for project in projects -%}
+                        <div class="grid grid-cols-2 p-3">
+                            <div>
+                                <div class="mb-8 text-5xl">
+                                    {{ project.title }}
+                                </div>
+                                <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
+                                <div class="mb-4">{{ project.description }}</div>
+                                <div class="">
+                                    <a class="text-2xl font-medium" href="{{ project.link }}" target="_blank">Go to project
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 inline" viewbox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0
+                                                    0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl" src="/images/{{ project.image }}" alt="{{ project.title }}"/>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+        <div class="flex pt-12">
+            <div class="">
+                <div class="lg:sticky lg:top-36 w-24 py-24 rotate-90 text-3xl lg:text-6xl text-ink-muted-light dark:text-ink-muted-dark">
+                    Experience</div>
+            </div>
+            <div class="flex-1">
+                <div class="p-4">
+                    {%- for job in experience -%}
+                        <div class="grid grid-cols-2 p-3">
+                            <div>
+                                <div class="mb-8 text-5xl">
+                                    {{ job.title }} @
+                                    <a href="{{ job.link }}">{{ job.company }}</a>
+                                </div>
+                                <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
+                                <div class="mb-4">{{ job.date }}</div>
+                                <div class="mb-4">{{ job.description }}</div>
+                            </div>
+                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl" src="/images/{{ job.image }}" alt="{{ job.company }}"/>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+        <div class="flex pt-12">
+            <div class="">
+                <div class="lg:sticky lg:top-36 w-24 py-24 rotate-90 text-3xl lg:text-6xl text-ink-muted-light dark:text-ink-muted-dark">
+                    Posts</div>
+            </div>
+            <div class="flex-1">
+                <div class="p-4">
+                    {%- for post in collections.posts -%}
+                        <div class="grid grid-cols-2 p-3">
+                            <div>
+                                <div class="mb-8 text-5xl">
+                                    {{ post.data.title }}
+                                </div>
+                                <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
+                                <div class="mb-4">{{ post.data.summary }}</div>
+                                <div class="">
+                                    <a class="text-2xl font-medium" href="{{ project.link }}" target="_blank">Go to post
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 inline" viewbox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0
+                                                    0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl" src="/images/{{ post.data.cover }}" alt="{{ post.data.title }}"/>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

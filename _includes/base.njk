@@ -8,18 +8,18 @@
         <link rel="stylesheet" href="/css/prism-theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     </head>
-    <body class="font-typewriter">
-        <div class="min-h-screen bg-hero-pattern dark:bg-hero-pattern-dark bg-paper-light dark:bg-paper-dark overflow-hidden">
-            <header class="bg-transparent text-ink-light dark:text-paper-light p-4 flex justify-between items-center flex-col lg:flex-row">
+    <body class="font-typewriter bg-hero-pattern dark:bg-hero-pattern-dark bg-paper-light dark:bg-paper-dark">
+        <div class="min-h-screen">
+            <header class="bg-transparent text-ink-light dark:text-paper-light p-6 flex justify-between items-center flex-col lg:flex-row">
                 <div class="hidden lg:flex items-center lg:flex-row">
                     <a href="/" class="text-xl lg:ml-4">Portfolio</a>
                     <a href="/blog" class="text-xl lg:ml-4">Blog</a>
                 </div>
-                <a href="/" class="text-4xl font-bold">{{ info.name }}</a>
-                <div class="flex items-center flex-col lg:flex-row">
-                    <a href="{{ info.github }}" target="_blank" class="text-xl lg:mr-4">
+                <a href="/" class="text-3xl lg:text-4xl">{{ info.name }}</a>
+                <div class="flex items-center flex-row lg:flex-row pt-3 lg:pt-0">
+                    <a href="{{ info.github }}" target="_blank" class="text-xl mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewbox="0 0 16 16">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
                             0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58
@@ -29,7 +29,7 @@
                             1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                         </svg>
                     </a>
-                    <a href="{{ info.linkedin }}" target="_blank" class="text-xl lg:mr-4">
+                    <a href="{{ info.linkedin }}" target="_blank" class="text-xl mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewbox="0 0 16 16">
                             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0
                             15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554
@@ -39,7 +39,7 @@
                             .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
                         </svg>
                     </a>
-                    <button class="text-xl lg:mr-4" onclick="toggleTheme()">
+                    <button class="text-xl mr-4" onclick="toggleTheme()">
                         <svg
                             id="light-mode-icon"
                             xmlns="http://www.w3.org/2000/svg"
