@@ -59,7 +59,7 @@ layout: base.njk
                                 <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
                                 <div class="mb-4">{{ project.description }}</div>
                                 <div class="">
-                                    <a class="text-2xl font-medium" href="{{ project.link }}" target="_blank">Go to project
+                                    <a class="text-2xl font-medium" href="{{ project.link }}" target="_blank">View demo
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 inline" viewbox="0 0 16 16">
                                             <path
                                                 fill-rule="evenodd"
@@ -87,18 +87,25 @@ layout: base.njk
             <div class="flex-1">
                 <div class="lg:p-4">
                     {%- for job in experience -%}
-                        <div class="grid lg:grid-cols-2 pt-6 py-3">
-                            <div>
-                                <div class="mb-8 text-4xl lg:text-5xl">
-                                    {{ job.title }} @
-                                    <a href="{{ job.link }}">{{ job.company }}</a>
+                        <a href="{{ job.link }}">
+                            <div class="grid lg:grid-cols-3 pt-6 py-3">
+                                <div class="lg:col-span-2">
+                                    <div class="mb-8 text-4xl lg:text-5xl">
+                                        {{ job.title }} @ {{ job.company }}
+                                    </div>
+                                    <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
+                                    <div class="mb-4">{{ job.date }}</div>
+                                    <article class="mb-4 prose lg:prose-md md:max-w-none prose-stone dark:prose-invert object-cover">
+                                        <ul>
+                                            {%- for point in job.description -%}
+                                                <li>{{ point }}</li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </article>
                                 </div>
-                                <div class="border-ink-light dark:border-ink-dark border-b-2 w-32 mb-4"></div>
-                                <div class="mb-4">{{ job.date }}</div>
-                                <div class="mb-4">{{ job.description }}</div>
+                                <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0" src="/images/{{ job.image }}" alt="{{ job.company }}"/>
                             </div>
-                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0" src="/images/{{ job.image }}" alt="{{ job.company }}"/>
-                        </div>
+                        </a>
                     {%- endfor -%}
                 </div>
             </div>
