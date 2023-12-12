@@ -81,3 +81,5 @@ Since, frequent words like "the", "a", etc. are not very useful when generating 
 ## GloVe
 
 GloVe builds upon word2vec by also taking into account the number of times a word pair occurs together in the entire corpus and not just the current window.
+
+<script src="/plots/word-embeddings.js" id="d759c709-5e75-484f-802b-833e2a4fa4a2"></script>
