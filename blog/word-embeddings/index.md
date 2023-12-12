@@ -3,7 +3,7 @@ tags:
   - posts
   - NLP
 title: Word Embeddings
-cover: image.png
+cover: word-embeddings.png
 summary: Understanding word2vec and gloVe algorithms and the significance of word embeddings.
 ---
 
@@ -16,9 +16,11 @@ The vectors of words with similar meanings have vectors with are closer.
 Similar to how convolutional layers from a pre-trained vision model gives us useful patters and representations, word embeddings capture relationships between words making the language model's job easier.
 
 Pros:
+
 - Easier representation of words. Using one hot vectors for each word in the dictionary will make a huge model. Using lower order embeddings reduces number of params in the model.
 
 Cons:
+
 - Can only represent whole words
 - Does not work on words which were never seen before
   Ex: We might encounter masculine form of a word in hindi during training but cannot represent the feminine form even though it differs only slightly.
@@ -32,6 +34,7 @@ Group of models that produce word embeddings. There are two different model arch
 - Continuous Bag of Words (CBOW) (faster)
 
 Training methods:
+
 - Hierarchical softmax (better for infrequent words)
 - Negative sampling (better for frequent words, works well when producing low dimensional vectors)
 
@@ -62,7 +65,7 @@ The continuous bag of words model tries to predict the centre word "embeddings" 
 
 ### Sub sampling
 
-Since, frequent words like "the", "a", etc. are not very useful when generating surrounding words, our model can benefit from pruning them. So, we discard every word in our dataset with the probability sqrt(k * corpus_length / count(word)). This makes it so that words that occur more have a higher probability of being removed. (NOTE: We are not removing the word from the vocabulary rather we are removing a single occurence of the word in our dataset based on the probability.)
+Since, frequent words like "the", "a", etc. are not very useful when generating surrounding words, our model can benefit from pruning them. So, we discard every word in our dataset with the probability sqrt(k \* corpus_length / count(word)). This makes it so that words that occur more have a higher probability of being removed. (NOTE: We are not removing the word from the vocabulary rather we are removing a single occurence of the word in our dataset based on the probability.)
 
 ### Training methods
 

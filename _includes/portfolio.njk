@@ -72,7 +72,7 @@ layout: base.njk
                                     </a>
                                 </div>
                             </div>
-                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0 w-full" src="/images/{{ project.image }}" alt="{{ project.title }}"/>
+                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0 aspect-video w-full object-cover" src="/images/{{ project.image }}" alt="{{ project.title }}"/>
                         </div>
                     {%- endfor -%}
                 </div>
@@ -103,7 +103,7 @@ layout: base.njk
                                         </ul>
                                     </article>
                                 </div>
-                                <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0" src="/images/{{ job.image }}" alt="{{ job.company }}"/>
+                                <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0 w-full" src="/images/{{ job.image }}" alt="{{ job.company }}"/>
                             </div>
                         </a>
                     {%- endfor -%}
@@ -140,7 +140,7 @@ layout: base.njk
                                     </a>
                                 </div>
                             </div>
-                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0" src="/images/{{ post.data.cover }}" alt="{{ post.data.title }}"/>
+                            <img class="grayscale-[75%] hover:grayscale-0 transition duration-500 hover:-translate-y-2 rounded-2xl shadow-2xl mt-4 lg:mt-0 aspect-video w-full object-cover" src="/images/{{ post.data.cover }}" alt="{{ post.data.title }}"/>
                         </div>
                     {%- endfor -%}
                 </div>
