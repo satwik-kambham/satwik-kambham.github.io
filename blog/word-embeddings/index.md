@@ -4,34 +4,7 @@ tags:
   - NLP
 title: Word Embeddings
 cover: Skip Gram.png
-summary: ...
----
-
-- Introduction - What are word embeddings and how do they help us?
-- Word2Vec
-  - What is word2vec?
-  - Skip-gram - Explanation and example with diagram
-  - Continuous bag of words - Explanation and example with diagram
-  - Optimized training methods
-    - Negative Sampling
-    - Hierarchical softmax
-  - Sub-sampling
-- GloVe - Simple summary of how it is different
-- Visualizing embeddings
-- Use cases
-  - Word Similarity
-    - Cosine
-    - Euclidean
-    - Dot product
-  - Word Analogy
-  - With language models
-- Conclusion - Summary, cons and why we are not using pre-trained embeddings anymore and have switched to using tokenizers and training embeddings for each model.
-- References
-  - My github repo
-  - Word2Vec papers
-  - Word2Vec tool
-  - d2l
-  - Wikitext-2
+summary: Understanding the concept of word embeddings and the working of pre-trained embeddings like word2vec.
 ---
 
 The concept of word embeddings stems from the challenge of figuring out how to represent words when training language models.
