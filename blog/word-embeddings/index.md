@@ -3,7 +3,7 @@ tags:
   - posts
   - NLP
 title: Word Embeddings
-cover: Skip Gram.png
+cover: Skip-Gram.png
 summary: Understanding the concept of word embeddings and the working of pre-trained embeddings like word2vec.
 ---
 
