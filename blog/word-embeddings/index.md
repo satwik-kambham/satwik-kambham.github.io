@@ -11,7 +11,7 @@ The concept of word embeddings stems from the challenge of figuring out how to r
 
 The simplest approach to representing words in numerical format is to create a mapping of all the words in the dictionary to a unique number. So, we would first create a vocabulary like so:
 
-```JSON
+```json
 {
   "a": 1,
   "apple": 2,
@@ -38,13 +38,14 @@ To combat this, we use the concept of one-hot encoding. One-hot encoding in a te
 
 Instead of representing words with a single number like before, we represent them with a sequence of length = size of the dictionary like so:
 
-| Word | a | apple | abacus | ... |
-|-|-|-|-|-|
-| a | 1 | 0 | 0 | ... |
-| apple | 0 | 1 | 0 | ... |
-| abacus | 0 | 0 | 1 | ... |
+| Word   | a   | apple | abacus | ... |
+| ------ | --- | ----- | ------ | --- |
+| a      | 1   | 0     | 0      | ... |
+| apple  | 0   | 1     | 0      | ... |
+| abacus | 0   | 0     | 1      | ... |
 
 One-hot encoding too has a few drawbacks:
+
 - If the size of our vocabulary is too large, the one-hot encoding also scales up which can lead to massive number of features in our language model.
 - It ignores the fact that some words can be similar and can be replaced with other words that are used in similar contexts.
 
@@ -72,13 +73,13 @@ Word2Vec is a technique that uses neural networks to learn word embeddings from 
 
 Skip-gram works on the assumption that in a piece of text, a word can be used to generate its surrounding words, i.e., given a single word, the skip-gram model learns to predict its surrounding words.
 
-![Skip Gram illustration](images/Skip Gram.png)
+![Skip Gram illustration](/images/Skip-Gram.png)
 
 ### Continuous bag of words (CBOW)
 
 The continuous bag of words model works based on the opposite assumption of the skip-gram model and learns to predict the centre word in a piece of text given the surrounding words.
 
-![Continuous bag of words illustration](images/Continuous Bag of Words.png)
+![Continuous bag of words illustration](/images/Continuous-Bag-of-Words.png)
 
 > The surrounding words are also referred to as the context words.
 
@@ -131,6 +132,7 @@ We can compute the similarity of two word embeddings using the following metrics
 - Dot product
 
 Here is an implementation of each of the following metrics:
+
 ```python
 def cosine_similarity(embed_a, embed_b):
     return np.dot(embed_a, embed_b) / (
@@ -180,6 +182,7 @@ similar_words("artillery")
 ```
 
 We can also find analogies:
+
 ```python
 def analogy(word_a, word_b, word_c, metric=cosine_similarity):
     embedding_a = get_embedding(word_a)

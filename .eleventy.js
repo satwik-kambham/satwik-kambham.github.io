@@ -1,6 +1,12 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.setLibrary("md", markdownIt({
+        html: true,
+        typographer: true
+    }));
+
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addPassthroughCopy({
