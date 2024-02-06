@@ -11,8 +11,8 @@ date: 2021-06-09
 All of us use a browser to surf through the internet.
 In fact you are using one right now.
 Have you ever wondered how the forward and backward buttons of the browser work?
-Or how the undo and redo functions of your text editor works?
-
+Or how the undo and redo functions of your text editor works?
+
 The answer to this is a doubly linked list.
 A linked list consists of various individual nodes which store some data as well as a pointer to the next node.
 A doubly linked list has nodes which have pointers to the previous node as well.

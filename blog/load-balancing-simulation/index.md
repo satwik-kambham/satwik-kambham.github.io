@@ -11,7 +11,7 @@ date: 2021-06-12
 Have you ever wondered how websites are able to handle millions of requests from people
 all over the world without crashing?
 
-Here is the answer: 
+Here is the answer: 
 All the requests that are made to a website are sent to a server which redirects your
 request to various other servers based on which servers are free and which servers are not free.
 This process is called [Load Balancing](https://en.wikipedia.org/wiki/Load_balancing_(computing)).

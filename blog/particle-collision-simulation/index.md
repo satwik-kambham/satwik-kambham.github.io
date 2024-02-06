@@ -34,7 +34,7 @@ We check whether any two particles touch or collide each other using their posit
 If the distance between the centres of the particles is less than or equal to the sum of the radius of the particles then the particles are colliding with each other
 (or)
 `C1C2 = r1 + r2`
-where `C1C2` = distance between centres of particle 1 and particle 2
+where `C1C2` = distance between centres of particle 1 and particle 2
 and `r1` and `r2` are the radii of particle 1 and particle 2 respectively.
 
 NOTE: We are not checking what happens when more that 2 particles collide simultaneously.

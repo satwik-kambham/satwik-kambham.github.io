@@ -37,7 +37,7 @@ Now that we have a way to store our maze, we can start looking at some of the al
 
 We are going to look at the following algorithms:
 
-1. Randomized Depth First Search algorithm
+1. Randomized Depth First Search algorithm
 2. Randomized Kruskal's algorithm
 3. Randomized Prim's algorithm
 

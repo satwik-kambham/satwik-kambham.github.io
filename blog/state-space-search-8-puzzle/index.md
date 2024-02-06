@@ -89,7 +89,7 @@ In greedy best first search, we explore the state with the best score according 
 
 ![Greedy BFS with Misplaced Tiles Heuristic](/images/Greedy-Misplaced-Tiles.gif)
 *Greedy BFS with Misplaced Tiles Heuristic*
-
+
 ![Greedy BFS with Eucledian Distance Heuristic](/images/Greedy-Eucledian-Distance.gif)
 *Greedy BFS with Eucledian Distance Heuristic*
 
@@ -102,7 +102,7 @@ In A`*` search, we explore the nodes which have the lowest sum of the heuristic 
 
 ![A`*` with Misplaced Tiles Heuristic](/images/AStar-Misplaced-Tiles.gif)
 *A`*` with Misplaced Tiles Heuristic*
-
+
 ![A`*` with Eucledian Distance Heuristic](/images/AStar-Eucledian-Distance.gif)
 *A`*` with Eucledian Distance Heuristic*
 
