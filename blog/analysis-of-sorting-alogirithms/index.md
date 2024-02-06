@@ -5,6 +5,7 @@ tags:
 title: Analysis of sorting algorithms
 cover: Bubble.png
 summary: Practical analysis of sorting algorithms and their time complexity
+date: 2021-07-18
 ---
 
 Sorting algorithms are one of the most basic as well as one of the most used algorithms.

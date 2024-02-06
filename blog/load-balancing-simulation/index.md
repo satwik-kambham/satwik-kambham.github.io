@@ -5,6 +5,7 @@ tags:
 title: Load Balancing Simulation
 cover: load-balancing-cover.avif
 summary: Have you ever wondered how websites are able to handle millions of requests from people all over the world without crashing?
+date: 2021-06-12
 ---
 
 Have you ever wondered how websites are able to handle millions of requests from people

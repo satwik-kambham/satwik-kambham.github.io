@@ -5,6 +5,7 @@ tags:
 title: Word Embeddings
 cover: Skip-Gram.png
 summary: Understanding the concept of word embeddings and the working of pre-trained embeddings like word2vec.
+date: 2023-12-08
 ---
 
 The concept of word embeddings stems from the challenge of figuring out how to represent words when training language models.

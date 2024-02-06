@@ -7,6 +7,7 @@ tags:
 title: State Space Search - 8 Puzzle
 cover: 8-Puzzle.jpg
 summary: Solving 8 puzzle using various state space search algorithms like A*, BFS, DFS, etc.
+date: 2021-10-15
 ---
 
 State space search is a process which is used to create simple artificial intelligence. It can be used when the problem can be represented as a set of simple states and the player / agent is the only one who can affect the environment. It allows us to generate a path from the initial state to the goal state (of which there can be many depending on the problem).

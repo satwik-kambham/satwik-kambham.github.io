@@ -5,6 +5,7 @@ tags:
 title: Tokenizers
 cover: Tokenization.svg
 summary: Understanding various tokenization techniques and their use cases.
+date: 2023-12-15
 ---
 
 Given a piece of text, how do we split it before passing it on to our model. In the previous post on word embeddings, we split our text into words by dividing it at whitespaces. This post aims to address the question of what is the best way to tokenize or split our text.

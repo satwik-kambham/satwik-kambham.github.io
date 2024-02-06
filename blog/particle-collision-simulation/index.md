@@ -5,6 +5,7 @@ tags:
 title: Particle Collision Simulation
 cover: particle-collision.gif
 summary: Time driven particle collision simulation from scratch
+date: 2021-08-05
 ---
 
 In a simple particle collision simulation, the goal is to simulate n particles colliding with each other or with the walls of the container.

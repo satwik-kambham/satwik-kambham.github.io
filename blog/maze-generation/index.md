@@ -7,6 +7,7 @@ tags:
 title: Maze Generation
 cover: Prim.gif
 summary: Generating unique maze using various algorithms
+date: 2021-12-23
 ---
 
 Maze generation is a fascinating topic. There are many ways to generate mazes and each one of them generates mazes with its own unique properties.

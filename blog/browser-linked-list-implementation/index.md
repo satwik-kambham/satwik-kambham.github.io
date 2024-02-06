@@ -5,6 +5,7 @@ tags:
 title: Browser linked list implementation
 cover: Double-Linked-List.png
 summary: Have you ever wondered how the forward and backward buttons of the browser work? Or how the undo and redo functions of your text editor works? 
+date: 2021-06-09
 ---
 
 All of us use a browser to surf through the internet.
